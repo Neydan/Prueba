@@ -1,0 +1,115 @@
++------------------------------------------------+-------------------------------------------------+
+|mkdir -p pruebas/imagenes/fotos                 | -p :crea, si no existe                          |
++------------------------------------------------+-------------------------------------------------+
+|cat archivo                                     |  ver sin abrir el fichero                       |
++------------------------------------------------+-------------------------------------------------+
+|cp archivo1 archivo2 /Directorio                |  copiar 2 o mas directorios                     |
++------------------------------------------------+-------------------------------------------------+
+|cp -Rp documentos Archivos                      |  copia recursiva R + p:Permisos                 |
+|                                                |  copia documentos --> dentro de archivos        |
++------------------------------------------------+-------------------------------------------------+
+|ls -la   ls -lrt    ls -lSr   ls -lRa           |    listar                                       |
++------------------------------------------------+-------------------------------------------------+
+|   ls sa*                                       |       comiencen con sa                          |
++------------------------------------------------+-------------------------------------------------+
+|   ls -l *ol*                                   |      contengan la palabra ol                    |
++------------------------------------------------+-------------------------------------------------+
+|    ls --help                                   |                                                 |
++------------------------------------------------+-------------------------------------------------+
+|*****************MOVER**************************|                                                 |
++------------------------------------------------+-------------------------------------------------+
+|    mv hola /tmp                                |      mover hola                                 |
++------------------------------------------------+-------------------------------------------------+
+|    mv /tmp/hola .                              |una carpeta al directorio actual                 |
++------------------------------------------------+-------------------------------------------------+
+|    mv hola holitas                             |       renombrar                                 |
++------------------------------------------------+-------------------------------------------------+
+|mv holitas imagenes/hola                        | holitas a hola                                  |
++------------------------------------------------+-------------------------------------------------+
+|******************BORRA*************************|                                                 |
++------------------------------------------------+-------------------------------------------------+
+|      rm -rf Directorio1                        |                                                 |
++------------------------------------------------+-------------------------------------------------+
+
+//////////////////////////////////////////////////////  VIM ///////////////////////////////////////////////////////////////////////
+/Palabra
+ESC			: ingresa al modo comando
+n	-->	sigue buscando
+N   --> sigue buscando
+1G	-->	va a primera linea **************************************************************************************************
+G     -->    va a la ultima línea  ******************************************************************************************
+27G	-->	va a linea 27
+h   --> muestra la ayuda del modo interactivo
+q! salir SIN GUARDAR FORZADO
+wq! salir GUARDADO FORZADO
+dG		    : elimina todo hasta la ultima linea
+dd			: corta o borra una linea
+d8d			: corta o borra 8 lineas
+yy			: copia una linea
+y7y			: copia 7 lineas
+yG          : copia desde la linea del curso actual hasta la última línea
+p			: pega el contenido del portapapel desde la siguiente línea
+u			: deshace la ultima accion
+ctrl+R		: rehace la ultima accion
+:set number	: muestra los numeros de linea
+:set nonumber	: quita los numeros de linea
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$> less /etc/services
+Flecha Arriba
+Flecha Abajo
+Av Pagina
+Ret Pagina
+/smtp
+n
+n
+n
+1G
+455G
+q
+/////////////////////////////////////////////////// AYUDA DEL SISTEMA /////////////////////////////////////////////////////////////////////////////////
+El comando man nos sirve para revisar la documentación de un comando
+$> man ls  (muestra la ayuda del comando ls)
+
+
+$> history    
+ Ejecuta el comando 127 del History
+$> !127
+ 
+|||||||||||||||||||||||||||||   Borrar el temporal   ||||||||||||||||||||||||||
+|||||||||||||||||||||||||||||   $> rm -f .poema.swp  ||||||||||||||||||||||||||
+ 
+//rpm -ivh nmap-sdasd --descarga paquete .rpm 
+//yum 
+//wget 
+   8  passwd
+   16  vim  /etc/ssh/sshd_config
+   20  ip add list
+   23  ping 172.16.16.1
+   24  ping 8.8.8.8
+   25  ping www.google.com
+   27  cat  /etc/resolv.conf}
+   yum update -y
+-------------------------------------------------------------
+tar 
+-backup
+EMPAQUETAR :tar cvf  backup.tar  	/etc /opt /var  				--empaqueta , repeta los ??permisos , fecha de cracion etc . esto solo empaquetea
+COMPRIMIR  :tar cvfz backup.tar.gz /etc /opt /var 				--COMPRIMER "z"
+??desempaquetar
+tar xvfz backup.tar.gz -- "x" EXTRAER
+
+tar.gz	Comprimir: 		tar -czvf archivo.tar.gz /carpeta/a/empaquetar/
+		Descomprimir:   tar -xzvf archivo.tar.gz
+
+.tar	Empaquetar:     tar -cvf paquete.tar /dir/a/comprimir/
+		Desempaquetar:  tar -xvf paquete.tar
+
+.gz
+		Comprimir:      gzip -9 index.php
+		Descomprimir:   gzip -d index.php.gz
+
+.zip
+		Comprimir:      zip archivo.zip carpeta
+		Descomprimir:   unzip archivo.zip
